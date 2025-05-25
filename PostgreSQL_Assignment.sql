@@ -59,6 +59,10 @@ VALUES
   JOIN sightings USING (ranger_id)
   GROUP BY name;
 
+  --5
+  SELECT common_name FROM species
+    WHERE species_id NOT IN (SELECT species_id FROM sightings);
+
 
 SELECT * FROM rangers;
 SELECT * FROM species;
