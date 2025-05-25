@@ -54,6 +54,11 @@ VALUES
   SELECT * FROM sightings
   WHERE location LIKE '%Pass%';
 
+  --4
+  SELECT name, COUNT(*) AS total_sightings FROM rangers
+  JOIN sightings USING (ranger_id)
+  GROUP BY name;
+
 
 SELECT * FROM rangers;
 SELECT * FROM species;
