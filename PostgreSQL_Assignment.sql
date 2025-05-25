@@ -68,6 +68,11 @@ VALUES
   ORDER BY sighting_time DESC
   LIMIT 2;
 
+  --7
+  UPDATE species
+  set conservation_status = 'Historic'
+  WHERE discovery_date < '1800-01-01';
+
 
 SELECT * FROM rangers;
 SELECT * FROM species;
