@@ -40,15 +40,15 @@ VALUES
 
 INSERT INTO sightings (ranger_id, species_id, sighting_time, location, notes)
 VALUES
-  (1, 1, '2022-01-01', 'Mountain Peak', 'Sighting of a Snow Leopard'),
-  (2, 2, '2022-02-01', 'River Bank', 'Sighting of a Bengal Tiger'),
-  (3, 3, '2022-03-01', 'Forest Clearing', 'Sighting of a Red Panda'),
-  (1, 4, '2022-04-01', 'Desert Oasis', 'Sighting of an Asiatic Elephant');
+  (2, 4, '2023-08-01 10:00:00', 'Himalayas', 'Spotted in the Himalayas');
 
 
   --1
   INSERT INTO rangers (name, region)
   VALUES ('Derek Fox', 'Coastal Plains');
+
+  --2 
+  SELECT COUNT(DISTINCT species_id) AS unique_species_count  FROM sightings;
 
 
 SELECT * FROM rangers;
