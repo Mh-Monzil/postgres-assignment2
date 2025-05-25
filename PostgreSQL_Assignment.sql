@@ -73,6 +73,17 @@ VALUES
   set conservation_status = 'Historic'
   WHERE discovery_date < '1800-01-01';
 
+  --8
+  SELECT sighting_id,
+  CASE 
+    WHEN sighting_time::TIME < '12:00:00' THEN 'Morning'
+    WHEN sighting_time::TIME BETWEEN '12:00:00' AND '17:00:00' THEN 'Afternoon'
+    WHEN sighting_time::TIME > '17:00:00' THEN 'Evening'
+  END AS time_of_day
+  FROM sightings;
+
+
+
 
 SELECT * FROM rangers;
 SELECT * FROM species;
