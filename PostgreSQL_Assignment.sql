@@ -63,6 +63,11 @@ VALUES
   SELECT common_name FROM species
     WHERE species_id NOT IN (SELECT species_id FROM sightings);
 
+  --6
+  SELECT * FROM sightings
+  ORDER BY sighting_time DESC
+  LIMIT 2;
+
 
 SELECT * FROM rangers;
 SELECT * FROM species;
