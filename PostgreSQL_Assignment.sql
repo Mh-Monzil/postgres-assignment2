@@ -46,6 +46,11 @@ VALUES
   (1, 4, '2022-04-01', 'Desert Oasis', 'Sighting of an Asiatic Elephant');
 
 
+  --1
+  INSERT INTO rangers (name, region)
+  VALUES ('Derek Fox', 'Coastal Plains');
+
+
 SELECT * FROM rangers;
 SELECT * FROM species;
 SELECT * FROM sightings;
