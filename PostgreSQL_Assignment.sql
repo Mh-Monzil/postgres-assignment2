@@ -64,7 +64,9 @@ VALUES
     WHERE species_id NOT IN (SELECT species_id FROM sightings);
 
   --6
-  SELECT * FROM sightings
+  SELECT common_name, sighting_time, name FROM sightings
+  JOIN rangers USING (ranger_id)
+  JOIN species USING (species_id)
   ORDER BY sighting_time DESC
   LIMIT 2;
 
